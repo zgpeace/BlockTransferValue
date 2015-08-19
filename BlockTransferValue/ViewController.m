@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
 
@@ -24,4 +25,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)doJumpToSecondView:(id)sender {
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    SecondViewController *secondViewcontroller = segue.destinationViewController;
+    
+    [secondViewcontroller returnText:^(NSString *showText) {
+        self.label.text = showText;
+    }];
+    
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
