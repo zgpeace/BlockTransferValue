@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -41,19 +41,62 @@
                                     <segue destination="zCb-11-znl" kind="push" id="JMw-Kg-cA6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1B9-g2-9iM">
+                                <rect key="frame" x="24" y="339" width="273" height="30"/>
+                                <color key="backgroundColor" red="0.89457059735824462" green="0.56594089063534536" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sj6-8c-KRL"/>
+                                </constraints>
+                                <state key="normal" title="Loading">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doLoading:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7X6-C1-xpu"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rnc-mM-roT">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="2gb-HL-3tO"/>
+                                    <constraint firstAttribute="height" constant="20" id="JwM-ZL-PIZ"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neF-Sx-MM3">
+                                <rect key="frame" x="24" y="384" width="273" height="171"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kh9-bI-dsS" id="Tj8-Bw-zzg"/>
+                                </connections>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="FH8-bk-yKu" secondAttribute="centerY" id="7m2-gp-QLS"/>
+                            <constraint firstItem="1B9-g2-9iM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="8kc-B9-J37"/>
                             <constraint firstItem="fiD-ft-Puf" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9Nl-Ha-c20"/>
                             <constraint firstAttribute="centerX" secondItem="FH8-bk-yKu" secondAttribute="centerX" id="Ad9-Fn-U8T"/>
+                            <constraint firstItem="neF-Sx-MM3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="IAI-HC-ZgW"/>
                             <constraint firstItem="fiD-ft-Puf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="55" id="JvW-WQ-mSi"/>
+                            <constraint firstItem="1B9-g2-9iM" firstAttribute="top" secondItem="FH8-bk-yKu" secondAttribute="bottom" constant="40" id="Muy-cN-ztW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1B9-g2-9iM" secondAttribute="trailing" constant="7" id="N28-PS-nFx"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="neF-Sx-MM3" secondAttribute="bottom" constant="13" id="Q9f-pp-epT"/>
+                            <constraint firstAttribute="centerY" secondItem="rnc-mM-roT" secondAttribute="centerY" id="W3S-xh-gDn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="neF-Sx-MM3" secondAttribute="trailing" constant="7" id="eJS-wp-ivc"/>
+                            <constraint firstAttribute="centerX" secondItem="rnc-mM-roT" secondAttribute="centerX" id="nFP-Dg-KDm"/>
+                            <constraint firstItem="neF-Sx-MM3" firstAttribute="top" secondItem="1B9-g2-9iM" secondAttribute="bottom" constant="15" id="o0R-b9-fUn"/>
                             <constraint firstItem="fiD-ft-Puf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="xHm-R2-s6B"/>
                         </constraints>
+                        <connections>
+                            <action selector="doHideKewboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IgD-Ub-0Lx"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="First View" id="Zxe-KY-zTB"/>
                     <connections>
+                        <outlet property="indicator" destination="rnc-mM-roT" id="eVO-hh-2Pt"/>
                         <outlet property="label" destination="fiD-ft-Puf" id="D0X-Bt-lcB"/>
+                        <outlet property="textViewContent" destination="neF-Sx-MM3" id="p4Y-s8-IFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

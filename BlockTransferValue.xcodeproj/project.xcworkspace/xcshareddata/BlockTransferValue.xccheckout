@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BD4583DF-6352-4EE9-BC4D-0689B8BAE212</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BlockTransferValue</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>136FC92741FE36855AB98248BCD1C00698DF32E0</key>
+		<string>https://github.com/zgpeace/BlockTransferValue.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BlockTransferValue.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>136FC92741FE36855AB98248BCD1C00698DF32E0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zgpeace/BlockTransferValue.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>136FC92741FE36855AB98248BCD1C00698DF32E0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>136FC92741FE36855AB98248BCD1C00698DF32E0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BlockTransferValue</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -8,11 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextViewDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 - (IBAction)doJumpToSecondView:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+@property (weak, nonatomic) IBOutlet UITextView *textViewContent;
+
+- (IBAction)doLoading:(id)sender;
+- (IBAction)doHideKewboard:(id)sender;
 
 @end
 
